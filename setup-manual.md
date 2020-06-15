@@ -35,8 +35,8 @@ The solution uses PowerShell scripting and incorporates the SharePoint Patterns 
 1. Close any PowerShell window that may be open and open a new one as an administrator, as per Step 1 of the previous section.
 2. Open file **OfficeEntry-ApplyListSchemas.ps1** and update the variables **$SiteURL** with your target SharePoint site and **$TemplateFile** with the full path and filename of the XML file that contains the List Template definitions.
 3. Note that weird results may be expected if lists of the same name already exist in the SharePoint site. It is recommended to create a new, empty, SharePoint subsite for the lists that will be used by this app. To create a new subsite:
-   i. select **Site contents** on the left hand side of the SharePoint screen, then Select **New --> Subsite**
-   ii. At minimum, provide a suitable **Title** and **Web Site Address**. The Template selection can be left as the default: Team site (no Office 365 group)
+    - select **Site contents** on the left hand side of the SharePoint screen, then Select **New --> Subsite**
+    - At minimum, provide a suitable **Title** and **Web Site Address**. The Template selection can be left as the default: Team site (no Office 365 group)
 4. Run the command **./OfficeEntry-ApplyListSchemas** (note: you must be in the same directory as the script and the XML file when you run this.)
 5. If you have not yet logged into Office 365 during this session, you will be prompted with a pop-up to login to Office 365 in the usual way.
 6. The new lists will then be created on the target SharePoint site.

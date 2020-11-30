@@ -1,5 +1,7 @@
 # Manuel de configuration de l'application COVID-19 Entrée au bureau
 
+**\*\*\*\*Mise à jour de la version 2 vient bientôt.\*\*\*** 
+
 **Date: 15 juin 2020**
 
 **Version: 1.0**

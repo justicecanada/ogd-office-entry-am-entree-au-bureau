@@ -1,74 +1,88 @@
 <?xml version="1.0"?>
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
-  <pnp:Templates ID="CONTAINER-TEMPLATE-D4ABE8F80AC54E27A5CD9DB7FEFB409E">
-    <pnp:ProvisioningTemplate ID="TEMPLATE-D4ABE8F80AC54E27A5CD9DB7FEFB409E" Version="1" BaseSiteTemplate="STS#3" Scope="Web">
+  <pnp:Templates ID="CONTAINER-TEMPLATE-D7AE595BDD5C4EAB9C612E092F5795A7">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-D7AE595BDD5C4EAB9C612E092F5795A7" Version="1" BaseSiteTemplate="STS#3" Scope="Web">
       <pnp:Lists>
-        <pnp:ListInstance Title="AccessRequest" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/AccessRequest" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/AccessRequest/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/AccessRequest/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/AccessRequest/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="AccessRequest" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/AccessRequest1" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/AccessRequest1/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/AccessRequest1/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/AccessRequest1/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{C48722D2-8D89-42AA-9E8B-86707CA7C1D9}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/AccessRequest/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
-              <Query>
-                <OrderBy>
-                  <FieldRef Name="ID" />
-                </OrderBy>
-              </Query>
+            <View Name="{920B657F-A0D6-44A0-A418-92A51454A030}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/AccessRequest1/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
               <ViewFields>
-                <FieldRef Name="DocIcon" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="SeriesID" />
                 <FieldRef Name="LinkTitle" />
-                <FieldRef Name="StartHour" />
-                <FieldRef Name="EndHour" />
-                <FieldRef Name="FloorID" />
-                <FieldRef Name="Status" />
-                <FieldRef Name="VisitorCount" />
                 <FieldRef Name="EntryDate" />
                 <FieldRef Name="EntryDateID" />
+                <FieldRef Name="FloorID" />
                 <FieldRef Name="EmployeeLogin" />
-                <FieldRef Name="EmployeeName" />
                 <FieldRef Name="EmployeeEmail" />
+                <FieldRef Name="EmployeeName" />
                 <FieldRef Name="ManagerLogin" />
-                <FieldRef Name="ManagerName" />
                 <FieldRef Name="ManagerEmail" />
+                <FieldRef Name="ManagerName" />
+                <FieldRef Name="StartHour" />
+                <FieldRef Name="EndHour" />
+                <FieldRef Name="CheckIn" />
+                <FieldRef Name="CheckOut" />
+                <FieldRef Name="CheckOutTime" />
                 <FieldRef Name="EquipmentEnglishText" />
                 <FieldRef Name="EquipmentFrenchText" />
+                <FieldRef Name="ReasonDetail" />
                 <FieldRef Name="ReasonEnglishText" />
                 <FieldRef Name="ReasonFrenchText" />
-                <FieldRef Name="ReasonDetail" />
+                <FieldRef Name="RecordCount" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="VisitorCount" />
+                <FieldRef Name="VisitorReason" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
               <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="Number" DisplayName="StartHour" Required="FALSE" Percentage="FALSE" ID="{81679259-6b4d-4d0c-824a-1a6692737404}" SourceID="{{listid:AccessRequest}}" StaticName="StartHour" Name="StartHour" ColName="float1" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="EndHour" Required="FALSE" Percentage="FALSE" ID="{4ae1d97d-182f-44d1-8336-1d08cf663502}" SourceID="{{listid:AccessRequest}}" StaticName="EndHour" Name="EndHour" ColName="float2" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="FloorID" Required="FALSE" ID="{d2e4c523-8a4f-4178-b7d4-e00e75052e2e}" SourceID="{{listid:AccessRequest}}" StaticName="FloorID" Name="FloorID" ColName="nvarchar4" RowOrdinal="0" Indexed="TRUE" Version="1" />
-            <Field Type="Text" DisplayName="Status" Required="FALSE" ID="{ff3d5a04-0cce-4c52-8a84-3c481626ca17}" SourceID="{{listid:AccessRequest}}" StaticName="Status" Name="Status" ColName="nvarchar5" RowOrdinal="0" Indexed="TRUE" Version="1" />
-            <Field Type="Number" DisplayName="VisitorCount" Required="FALSE" Percentage="FALSE" ID="{83945560-e49a-4b29-9bc0-abb1455ddf92}" SourceID="{{listid:AccessRequest}}" StaticName="VisitorCount" Name="VisitorCount" ColName="float3" RowOrdinal="0" />
-            <Field Type="DateTime" DisplayName="EntryDate" Required="FALSE" Format="DateOnly" ID="{72a44874-9ece-4ac9-8906-0f76e8adc61e}" SourceID="{{listid:AccessRequest}}" StaticName="EntryDate" Name="EntryDate" ColName="datetime1" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="EntryDateID" Required="FALSE" Percentage="FALSE" ID="{5bdd476e-d90e-46a8-b4d8-c8e9de5c1d9b}" SourceID="{{listid:AccessRequest}}" StaticName="EntryDateID" Name="EntryDateID" ColName="float4" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="EmployeeLogin" Required="FALSE" ID="{acea44c9-506d-44d9-837a-796c07d65f2b}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeLogin" Name="EmployeeLogin" ColName="nvarchar6" RowOrdinal="0" Indexed="TRUE" Version="1" />
-            <Field Type="Text" DisplayName="EmployeeName" Required="FALSE" ID="{a204b602-5443-4236-a49f-1bbb47215457}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeName" Name="EmployeeName" ColName="nvarchar7" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="EmployeeEmail" Required="FALSE" ID="{1d7f2f41-979f-4de5-b68d-8a2c4aed4a46}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeEmail" Name="EmployeeEmail" ColName="nvarchar8" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="ManagerLogin" Required="FALSE" ID="{fd224d25-76f1-421a-9791-229f859b4b73}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerLogin" Name="ManagerLogin" ColName="nvarchar9" RowOrdinal="0" Indexed="TRUE" Version="1" />
-            <Field Type="Text" DisplayName="ManagerName" Required="FALSE" ID="{42a76fe9-d22e-43b7-9898-272a484afc58}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerName" Name="ManagerName" ColName="nvarchar10" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="ManagerEmail" Required="FALSE" ID="{a7ed4cd8-5db5-472d-ad5c-5c934a657bc4}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerEmail" Name="ManagerEmail" ColName="nvarchar11" RowOrdinal="0" />
-            <Field Type="Note" DisplayName="EquipmentEnglishText" Required="FALSE" RichText="TRUE" ID="{21ec4bd4-522b-43e1-b1dc-8d8901d8df28}" SourceID="{{listid:AccessRequest}}" StaticName="EquipmentEnglishText" Name="EquipmentEnglishText" ColName="ntext2" RowOrdinal="0" />
-            <Field Type="Note" DisplayName="EquipmentFrenchText" Required="FALSE" RichText="TRUE" ID="{769f7de5-433e-4402-9701-416b93a63613}" SourceID="{{listid:AccessRequest}}" StaticName="EquipmentFrenchText" Name="EquipmentFrenchText" ColName="ntext3" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="ReasonEnglishText" Required="FALSE" ID="{c569d3a5-2c7c-4750-b7e9-f92bec4bd0b4}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonEnglishText" Name="ReasonEnglishText" ColName="nvarchar12" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="ReasonFrenchText" Required="FALSE" ID="{973fcfd2-cbfd-4b63-babe-39f13ec76265}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonFrenchText" Name="ReasonFrenchText" ColName="nvarchar13" RowOrdinal="0" />
-            <Field Type="Note" DisplayName="ReasonDetail" Required="FALSE" RichText="TRUE" ID="{e98c8d54-ce36-4dc4-9539-038e6f5c8989}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonDetail" Name="ReasonDetail" ColName="ntext4" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="StartHour" Required="FALSE" Percentage="FALSE" ID="{efbf16c2-5f31-4fd6-a3ba-9f5c24542b2a}" SourceID="{{listid:AccessRequest}}" StaticName="StartHour" Name="StartHour" ColName="float1" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="EndHour" Required="FALSE" Percentage="FALSE" ID="{d01ca3ee-d1ab-407e-acd6-a6f7d0774331}" SourceID="{{listid:AccessRequest}}" StaticName="EndHour" Name="EndHour" ColName="float2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="FloorID" Required="FALSE" ID="{ce7197ae-68ad-4107-8707-5b00ab463e5d}" SourceID="{{listid:AccessRequest}}" StaticName="FloorID" Name="FloorID" ColName="nvarchar4" RowOrdinal="0" Indexed="TRUE" Version="1" />
+            <Field Type="Text" DisplayName="Status" Required="FALSE" ID="{69447401-42e6-4359-a72c-79f61a710f50}" SourceID="{{listid:AccessRequest}}" StaticName="Status" Name="Status" ColName="nvarchar5" RowOrdinal="0" Indexed="TRUE" Version="1" />
+            <Field Type="Number" DisplayName="VisitorCount" Required="FALSE" Percentage="FALSE" ID="{37d31af3-47a1-4486-af77-798aff552f22}" SourceID="{{listid:AccessRequest}}" StaticName="VisitorCount" Name="VisitorCount" ColName="float3" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="EntryDate" Required="FALSE" Format="DateOnly" ID="{857ac3dc-4998-4a77-aa04-0dff1b50f4bc}" SourceID="{{listid:AccessRequest}}" StaticName="EntryDate" Name="EntryDate" ColName="datetime1" RowOrdinal="0" Indexed="FALSE" Version="4" />
+            <Field Type="Number" DisplayName="EntryDateID" Required="FALSE" Percentage="FALSE" ID="{c8d415ed-d9a2-4e09-860a-234cae27c31b}" SourceID="{{listid:AccessRequest}}" StaticName="EntryDateID" Name="EntryDateID" ColName="float4" RowOrdinal="0" Indexed="TRUE" AutoIndexed="TRUE" />
+            <Field Type="Text" DisplayName="EmployeeLogin" Required="TRUE" ID="{8acae06b-2e3f-4668-b3a4-ca8ccaaa3548}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeLogin" Name="EmployeeLogin" ColName="nvarchar6" RowOrdinal="0" Indexed="TRUE" Version="2" CustomFormatter="" EnforceUniqueValues="FALSE" MaxLength="255" />
+            <Field Type="Text" DisplayName="EmployeeName" Required="TRUE" ID="{d753706c-8d10-497f-8d21-85d0f34a1ed2}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeName" Name="EmployeeName" ColName="nvarchar7" RowOrdinal="0" CustomFormatter="" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Version="1" />
+            <Field Type="Text" DisplayName="EmployeeEmail" Required="FALSE" ID="{eceb10a4-87c4-474b-9b4b-200b98d05891}" SourceID="{{listid:AccessRequest}}" StaticName="EmployeeEmail" Name="EmployeeEmail" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ManagerLogin" Required="TRUE" ID="{4ee35001-7313-4551-b59b-ec08250b7265}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerLogin" Name="ManagerLogin" ColName="nvarchar9" RowOrdinal="0" Indexed="TRUE" Version="2" CustomFormatter="" EnforceUniqueValues="FALSE" MaxLength="255" />
+            <Field Type="Text" DisplayName="ManagerName" Required="TRUE" ID="{36addd30-3430-4005-b3b8-10950d07f497}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerName" Name="ManagerName" ColName="nvarchar10" RowOrdinal="0" CustomFormatter="" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Version="1" />
+            <Field Type="Text" DisplayName="ManagerEmail" Required="FALSE" ID="{90b1e670-81c9-439d-956f-09b1c01b3c87}" SourceID="{{listid:AccessRequest}}" StaticName="ManagerEmail" Name="ManagerEmail" ColName="nvarchar11" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="EquipmentEnglishText" Required="FALSE" RichText="TRUE" ID="{02b0c1ef-0eec-42e8-af22-d7d041f28ffe}" SourceID="{{listid:AccessRequest}}" StaticName="EquipmentEnglishText" Name="EquipmentEnglishText" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="EquipmentFrenchText" Required="FALSE" RichText="TRUE" ID="{fd96997f-7c79-4ad4-a732-371a9ed4d1f1}" SourceID="{{listid:AccessRequest}}" StaticName="EquipmentFrenchText" Name="EquipmentFrenchText" ColName="ntext3" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ReasonEnglishText" Required="FALSE" ID="{640d24aa-263d-4165-aa6f-925d650623a8}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonEnglishText" Name="ReasonEnglishText" ColName="nvarchar12" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ReasonFrenchText" Required="FALSE" ID="{9887cf16-c849-421a-be93-717df861ca98}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonFrenchText" Name="ReasonFrenchText" ColName="nvarchar13" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="ReasonDetail" Required="FALSE" RichText="TRUE" ID="{8af9c96d-a53f-4988-a7a2-76fd1e46a868}" SourceID="{{listid:AccessRequest}}" StaticName="ReasonDetail" Name="ReasonDetail" ColName="ntext4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="SeriesID" Required="TRUE" EnforceUniqueValues="FALSE" Indexed="TRUE" MaxLength="255" ID="{dbb09c20-4997-4d2d-abfc-7a0be5d24df6}" SourceID="{{listid:AccessRequest}}" StaticName="SeriesID" Name="SeriesID" ColName="nvarchar14" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Number" DisplayName="RequestCount" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="TRUE" ID="{31c02108-5bc1-4d5a-b747-c06ee5152421}" SourceID="{{listid:AccessRequest}}" StaticName="RecordCount" Name="RecordCount" ColName="float5" RowOrdinal="0" CustomFormatter="" Percentage="FALSE" Version="1" AutoIndexed="TRUE" />
+            <Field Type="DateTime" DisplayName="CheckIn" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{5eed3264-1049-4087-8207-fe9f6197881c}" SourceID="{{listid:AccessRequest}}" StaticName="CheckIn" Name="CheckIn" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="CheckOut" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{539865f2-294a-489d-9623-578d953f841b}" SourceID="{{listid:AccessRequest}}" StaticName="CheckOut" Name="CheckOut" ColName="datetime3" RowOrdinal="0" />
+            <Field Type="Note" DisplayName="VisitorReason" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{74b6d7c0-d119-461c-83fc-fd7bc3a34543}" SourceID="{{listid:AccessRequest}}" StaticName="VisitorReason" Name="VisitorReason" ColName="ntext5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="CheckOutTime" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{0ee4a8bc-2b78-4466-acdf-d016bd5673ba}" SourceID="{{listid:AccessRequest}}" StaticName="CheckOutTime" Name="CheckOutTime" ColName="nvarchar15" RowOrdinal="0" />
           </pnp:Fields>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="Building" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Building" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Building/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Building/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Building/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="Building" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Building1" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Building1/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Building1/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Building1/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{A9AA5E11-A9ED-44AD-8A99-260A31C17F0D}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Building/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{1AC4A10B-F731-4056-94A1-71CD1E5202B0}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Building1/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -87,33 +101,80 @@
                 <FieldRef Name="City" />
                 <FieldRef Name="TimeZone" />
                 <FieldRef Name="TimeZoneOffset" />
-                <FieldRef Name="Deleted" />
+                <FieldRef Name="CommissionaireEmail" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="Text" DisplayName="BuildingEnglishText" Required="FALSE" ID="{5ef758a3-10d6-4637-ab56-95a67dccf778}" SourceID="{{listid:Building}}" StaticName="BuildingEnglishText" Name="BuildingEnglishText" ColName="nvarchar4" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="BuildingFrenchText" Required="FALSE" ID="{b299b1c9-629b-4319-b958-46cbc7f06cde}" SourceID="{{listid:Building}}" StaticName="BuildingFrenchText" Name="BuildingFrenchText" ColName="nvarchar5" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="BuildingShortText" Required="FALSE" ID="{ce529454-a739-4c97-8289-c3b7f0756744}" SourceID="{{listid:Building}}" StaticName="BuildingShortText" Name="BuildingShortText" ColName="nvarchar6" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="RegionEnglishText" Required="FALSE" ID="{c3a4195f-a482-4496-beea-da24f7156cde}" SourceID="{{listid:Building}}" StaticName="RegionEnglishText" Name="RegionEnglishText" ColName="nvarchar7" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="RegionFrenchText" Required="FALSE" ID="{60b01b4b-ee8b-4923-83f4-81313b7c1517}" SourceID="{{listid:Building}}" StaticName="RegionFrenchText" Name="RegionFrenchText" ColName="nvarchar8" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="RegionSortOrder" Required="FALSE" Percentage="FALSE" ID="{9cd4400b-7753-4f46-b2b3-b48139ac50d0}" SourceID="{{listid:Building}}" StaticName="RegionSortOrder" Name="RegionSortOrder" ColName="float1" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="Address" Required="FALSE" ID="{c21ae0ca-1038-407b-a0ff-1244d79088a1}" SourceID="{{listid:Building}}" StaticName="Address" Name="Address" ColName="nvarchar9" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="City" Required="FALSE" ID="{ca77c7c1-eda4-48ca-a871-f5c572dbe6bf}" SourceID="{{listid:Building}}" StaticName="City" Name="City" ColName="nvarchar10" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="TimeZone" Required="FALSE" ID="{9a3b1531-0912-4476-839b-0757901ce6a3}" SourceID="{{listid:Building}}" StaticName="TimeZone" Name="TimeZone" ColName="nvarchar11" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="TimeZoneOffset" Required="FALSE" Percentage="FALSE" ID="{5fd60882-4697-48cb-88e3-c97650f5d120}" SourceID="{{listid:Building}}" StaticName="TimeZoneOffset" Name="TimeZoneOffset" ColName="float2" RowOrdinal="0" />
-            <Field Name="Deleted" FromBaseType="FALSE" Type="DateTime" DisplayName="Deleted" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{a68901d9-40aa-443f-8562-3b7b9620f5ea}" Version="1" StaticName="Deleted" SourceID="{{listid:Building}}" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="BuildingEnglishText" Required="FALSE" ID="{28b5e657-41f2-4141-b315-e95ad31362ba}" SourceID="{{listid:Building}}" StaticName="BuildingEnglishText" Name="BuildingEnglishText" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="BuildingFrenchText" Required="FALSE" ID="{90b88f1e-82eb-4798-ade6-e0469b2211db}" SourceID="{{listid:Building}}" StaticName="BuildingFrenchText" Name="BuildingFrenchText" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="BuildingShortText" Required="FALSE" ID="{07441afc-c950-4286-bf47-99d82428f3e8}" SourceID="{{listid:Building}}" StaticName="BuildingShortText" Name="BuildingShortText" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="RegionEnglishText" Required="FALSE" ID="{baa8e3fc-4694-4c29-941d-b4fe209f49e4}" SourceID="{{listid:Building}}" StaticName="RegionEnglishText" Name="RegionEnglishText" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="RegionFrenchText" Required="FALSE" ID="{9bb99a6b-9818-4269-b62e-4c0dbff1acfb}" SourceID="{{listid:Building}}" StaticName="RegionFrenchText" Name="RegionFrenchText" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="RegionSortOrder" Required="FALSE" Percentage="FALSE" ID="{fe2adf1c-c500-4c52-b344-077eec6e49db}" SourceID="{{listid:Building}}" StaticName="RegionSortOrder" Name="RegionSortOrder" ColName="float1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Address" Required="FALSE" ID="{d6a85dec-eba2-428c-87af-d760dbcb3c4a}" SourceID="{{listid:Building}}" StaticName="Address" Name="Address" ColName="nvarchar9" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="City" Required="FALSE" ID="{92966af1-02af-44be-b833-76a3a0ce2283}" SourceID="{{listid:Building}}" StaticName="City" Name="City" ColName="nvarchar10" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="TimeZone" Required="FALSE" ID="{0b754673-2380-4cfb-ad5a-f307557e4800}" SourceID="{{listid:Building}}" StaticName="TimeZone" Name="TimeZone" ColName="nvarchar11" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="TimeZoneOffset" Required="FALSE" Percentage="FALSE" ID="{99e7b84e-2beb-4f91-aab4-104e1d262af3}" SourceID="{{listid:Building}}" StaticName="TimeZoneOffset" Name="TimeZoneOffset" ColName="float2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="CommissionaireEmail" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{58569aee-266a-41c2-9053-2a835a5ec9aa}" SourceID="{{listid:Building}}" StaticName="CommissionaireEmail" Name="CommissionaireEmail" ColName="nvarchar12" RowOrdinal="0" />
           </pnp:Fields>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="Floor" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Floor" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Floor/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Floor/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Floor/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="EmailQueue" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/EmailQueue" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/EmailQueue/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/EmailQueue/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/EmailQueue/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{5D4CBF61-6965-4860-9BE7-84CC95125742}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Floor/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{396B7C0C-31F8-4EA3-946D-414F36DECCE7}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/EmailQueue/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="AccessRequestID" />
+                <FieldRef Name="VisitorEmail" />
+                <FieldRef Name="_x0072_lf4" />
+                <FieldRef Name="EmailState" />
+                <FieldRef Name="ybjl" />
+                <FieldRef Name="EmailDelivered" />
+                <FieldRef Name="EmailCC" />
+                <FieldRef Name="AttachHealthAndSafety" />
+                <FieldRef Name="DeliverAfter" />
+                <FieldRef Name="DeliverBefore" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Author" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter><![CDATA[]]></CustomFormatter>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="AccessRequestID" Required="FALSE" ID="{d0e9b3a1-6203-4845-8a11-01b3edd4340f}" StaticName="AccessRequestID" Name="AccessRequestID" Indexed="TRUE" CustomFormatter="" EnforceUniqueValues="FALSE" MaxLength="255" SourceID="{{listid:EmailQueue}}" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="EmailTo" Required="FALSE" ID="{85000180-8ea3-438d-8545-b455de2b50d4}" StaticName="VisitorEmail" Name="VisitorEmail" CustomFormatter="" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" SourceID="{{listid:EmailQueue}}" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="EmailCC" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{78340292-5243-4d88-8e9d-07ee4f302eb8}" StaticName="EmailCC" Name="EmailCC" SourceID="{{listid:EmailQueue}}" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Name="_x0072_lf4" DisplayName="EmailSubject" Type="Text" ID="{ef10e72a-5ed9-40bc-95ba-60592f9df706}" StaticName="_x0072_lf4" SourceID="{{listid:EmailQueue}}" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Name="ybjl" FromBaseType="FALSE" Type="Note" DisplayName="EmailBody" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="40" RichText="TRUE" RichTextMode="FullHtml" IsolateStyles="TRUE" Sortable="FALSE" ID="{c2340a2c-e370-4d27-8bb8-607c0c7b77df}" StaticName="ybjl" SourceID="{{listid:EmailQueue}}" ColName="ntext2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="EmailState" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{203e4739-d397-436f-b4b3-bf9f118136b6}" StaticName="EmailState" Name="EmailState" SourceID="{{listid:EmailQueue}}" ColName="nvarchar8" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="EmailDelivered" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{eaf58db1-71af-4eec-9c20-e2db5d1309b4}" StaticName="EmailDelivered" Name="EmailDelivered" SourceID="{{listid:EmailQueue}}" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Boolean" DisplayName="AttachHealthAndSafety" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{97103544-dc12-427e-8080-ff16378807a2}" StaticName="AttachHealthAndSafety" Name="AttachHealthAndSafety" CustomFormatter="" Required="FALSE" SourceID="{{listid:EmailQueue}}" ColName="bit1" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+            <Field Type="DateTime" DisplayName="DeliverAfter" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{e79bea55-bd70-4164-978d-10573a6e1a23}" StaticName="DeliverAfter" Name="DeliverAfter" SourceID="{{listid:EmailQueue}}" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="DeliverBefore" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{39590936-74c0-4135-a041-343c5e6e1eb0}" StaticName="DeliverBefore" Name="DeliverBefore" SourceID="{{listid:EmailQueue}}" ColName="datetime3" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="Floor" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/Floor" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/Floor/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Floor/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Floor/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{24F5B65D-E660-4092-B618-F1986A1A880F}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/Floor/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -131,34 +192,92 @@
                 <FieldRef Name="DefaultCapacityPortion" />
                 <FieldRef Name="ModifiedCapacityFlag" />
                 <FieldRef Name="ChangeReason" />
-                <FieldRef Name="Deleted" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="Text" DisplayName="BuildingID" Required="FALSE" ID="{9dba2490-d2c4-4a13-ac5b-17dead2c954c}" SourceID="{{listid:Floor}}" StaticName="BuildingID" Name="BuildingID" ColName="nvarchar4" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="FloorEnglishText" Required="FALSE" ID="{f386b0a6-4fdd-4d3a-bef2-923cf06ea026}" SourceID="{{listid:Floor}}" StaticName="FloorEnglishText" Name="FloorEnglishText" ColName="nvarchar5" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="FloorFrenchText" Required="FALSE" ID="{81a3c234-8092-4296-b0b6-2281aa93dfcf}" SourceID="{{listid:Floor}}" StaticName="FloorFrenchText" Name="FloorFrenchText" ColName="nvarchar6" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="FloorSortOrder" Required="FALSE" ID="{068c6bda-957b-4829-98e3-fd27b5f18f06}" SourceID="{{listid:Floor}}" StaticName="FloorSortOrder" Name="FloorSortOrder" ColName="nvarchar7" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="Capacity" Required="FALSE" Percentage="FALSE" ID="{8a26838c-e615-422c-8224-1c0090481de8}" SourceID="{{listid:Floor}}" StaticName="Capacity" Name="Capacity" ColName="float1" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="CurrentCapacity" Required="FALSE" Percentage="FALSE" ID="{3701786f-8989-4261-a364-d7693d0babfb}" SourceID="{{listid:Floor}}" StaticName="CurrentCapacity" Name="CurrentCapacity" ColName="float2" RowOrdinal="0" />
-            <Field Type="Number" DisplayName="DefaultCapacityPortion" Required="FALSE" Percentage="FALSE" ID="{d6377f3b-7eaa-464f-89cc-eb4e14c3ef9c}" SourceID="{{listid:Floor}}" StaticName="DefaultCapacityPortion" Name="DefaultCapacityPortion" ColName="float3" RowOrdinal="0" />
-            <Field Type="Boolean" DisplayName="ModifiedCapacityFlag" ID="{6f54df3d-4a72-4364-ab27-e45d978e9d8e}" SourceID="{{listid:Floor}}" StaticName="ModifiedCapacityFlag" Name="ModifiedCapacityFlag" ColName="bit1" RowOrdinal="0">
+            <Field Type="Text" DisplayName="BuildingID" Required="FALSE" ID="{c3dedcc9-7663-46cf-a14a-1a9b0a963259}" SourceID="{{listid:Floor}}" StaticName="BuildingID" Name="BuildingID" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="FloorEnglishText" Required="FALSE" ID="{eec50729-8de2-4ac1-aafd-d34e531461a0}" SourceID="{{listid:Floor}}" StaticName="FloorEnglishText" Name="FloorEnglishText" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="FloorFrenchText" Required="FALSE" ID="{c9fe99a6-cf6e-4a77-920a-3b4573f706a4}" SourceID="{{listid:Floor}}" StaticName="FloorFrenchText" Name="FloorFrenchText" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="FloorSortOrder" Required="FALSE" ID="{bd459b42-38b2-40ca-8687-29b3a8229578}" SourceID="{{listid:Floor}}" StaticName="FloorSortOrder" Name="FloorSortOrder" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="Capacity" Required="FALSE" Percentage="FALSE" ID="{7ab69d0f-3f81-43c8-a92f-b5013f2273ea}" SourceID="{{listid:Floor}}" StaticName="Capacity" Name="Capacity" ColName="float1" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="CurrentCapacity" Required="FALSE" Percentage="FALSE" ID="{b75a8edb-2bce-4b0c-83ea-e17f3771e974}" SourceID="{{listid:Floor}}" StaticName="CurrentCapacity" Name="CurrentCapacity" ColName="float2" RowOrdinal="0" />
+            <Field Type="Number" DisplayName="DefaultCapacityPortion" Required="FALSE" Percentage="FALSE" ID="{b0aa8b4e-ab1b-4a7a-9f11-958a3c45bc52}" SourceID="{{listid:Floor}}" StaticName="DefaultCapacityPortion" Name="DefaultCapacityPortion" ColName="float3" RowOrdinal="0" />
+            <Field Type="Boolean" DisplayName="ModifiedCapacityFlag" ID="{2d5ace94-f2b0-4a0e-b65e-5ffbd238ebdf}" SourceID="{{listid:Floor}}" StaticName="ModifiedCapacityFlag" Name="ModifiedCapacityFlag" ColName="bit1" RowOrdinal="0">
               <Default>-1</Default>
             </Field>
-            <Field Type="Text" DisplayName="ChangeReason" Required="FALSE" ID="{f1ea932e-ef9a-4dec-9b9d-0183ca800774}" SourceID="{{listid:Floor}}" StaticName="ChangeReason" Name="ChangeReason" ColName="nvarchar8" RowOrdinal="0" />
-            <Field Name="Deleted" FromBaseType="FALSE" Type="DateTime" DisplayName="Deleted" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateOnly" FriendlyDisplayFormat="Disabled" ID="{20869171-3105-47e5-a6e7-7d1f0c7e52e4}" Version="1" StaticName="Deleted" SourceID="{{listid:Floor}}" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ChangeReason" Required="FALSE" ID="{5b7961ec-a5cd-4a13-bff5-8e6c712a4dd0}" SourceID="{{listid:Floor}}" StaticName="ChangeReason" Name="ChangeReason" ColName="nvarchar8" RowOrdinal="0" />
           </pnp:Fields>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="UserSetting" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/UserSetting" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/UserSetting/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/UserSetting/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/UserSetting/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="LoginLog" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/LoginLog" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/LoginLog/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/LoginLog/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/LoginLog/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{14B3C71E-B742-441F-8C1C-629D352F195B}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/UserSetting/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{DA42E29C-2E41-4227-9BA9-412F35915202}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/LoginLog/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="TimeZoneOffset" />
+                <FieldRef Name="NowText" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Author" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="NowSimple" />
+                <FieldRef Name="NowEDTOffset" />
+                <FieldRef Name="NowTimeZoneOffset" />
+                <FieldRef Name="AppVersion" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field CommaSeparator="TRUE" Decimals="0" DisplayName="TimeZoneOffset" Format="Dropdown" Name="TimeZoneOffset" Percentage="FALSE" Title="TimeZoneOffset" Type="Number" ID="{bc4fd7dd-abb3-480b-bcfa-362eb7101ac3}" StaticName="TimeZoneOffset" SourceID="{{listid:LoginLog}}" ColName="float1" RowOrdinal="0" />
+            <Field DisplayName="NowText" Format="Dropdown" MaxLength="255" Name="NowText" Title="NowText" Type="Text" ID="{3495a34c-899c-4cad-bf70-c4b4195e696f}" SourceID="{{listid:LoginLog}}" StaticName="NowText" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="NowSimple" FriendlyDisplayFormat="Disabled" Format="DateTime" Name="NowSimple" Title="NowSimple" Type="DateTime" ID="{06248a3f-8392-4481-bad8-14eb190c9223}" SourceID="{{listid:LoginLog}}" StaticName="NowSimple" ColName="datetime1" RowOrdinal="0" />
+            <Field DisplayName="NowTimeZoneOffset" FriendlyDisplayFormat="Disabled" Format="DateTime" Name="NowTimeZoneOffset" Title="NowTimeZoneOffset" Type="DateTime" ID="{f2ac6014-2252-423d-97df-a248ff5209b5}" SourceID="{{listid:LoginLog}}" StaticName="NowTimeZoneOffset" ColName="datetime2" RowOrdinal="0" />
+            <Field DisplayName="NowEDTOffset" FriendlyDisplayFormat="Disabled" Format="DateTime" Name="NowEDTOffset" Title="NowEDTOffset" Type="DateTime" ID="{6e855f4a-8a6e-4851-83dc-d10f9227a299}" SourceID="{{listid:LoginLog}}" StaticName="NowEDTOffset" ColName="datetime3" RowOrdinal="0" />
+            <Field DisplayName="AppVersion" Format="Dropdown" MaxLength="255" Name="AppVersion" Title="AppVersion" Type="Text" ID="{b67c4958-5630-4203-b563-fb3da26c2a89}" SourceID="{{listid:LoginLog}}" StaticName="AppVersion" ColName="nvarchar5" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="TextTemplate" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/TextTemplate" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TextTemplate/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TextTemplate/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TextTemplate/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{D33F7071-15C2-492F-A4B0-2D1F8B2A82A0}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/TextTemplate/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="BodyText" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter><![CDATA[]]></CustomFormatter>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field AppendOnly="FALSE" DisplayName="BodyText" Format="Dropdown" IsolateStyles="FALSE" Name="BodyText" RichText="FALSE" RichTextMode="Compatible" Title="BodyText" Type="Note" ID="{92667c5a-07b6-4ddd-aba4-6e3ba14519e3}" StaticName="BodyText" SourceID="{{listid:TextTemplate}}" ColName="ntext2" RowOrdinal="0" />
+            <Field AppendOnly="FALSE" DisplayName="Notes" Format="Dropdown" IsolateStyles="FALSE" Name="Notes" RichText="FALSE" RichTextMode="Compatible" Title="Notes" Type="Note" ID="{eadf6209-00c5-4680-b829-d583dafcf5a0}" StaticName="Notes" SourceID="{{listid:TextTemplate}}" ColName="ntext3" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="UserSetting" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/UserSetting1" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/UserSetting1/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/UserSetting1/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/UserSetting1/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{8B22EA27-D2AF-4F6A-B2E4-B666D8AC3789}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/UserSetting1/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -170,24 +289,58 @@
                 <FieldRef Name="AgreedToPrivacy" />
                 <FieldRef Name="AgreedToHealthSafety" />
                 <FieldRef Name="ManagerLogin" />
+                <FieldRef Name="AssistantLogin" />
+                <FieldRef Name="SendPushNotifications" />
               </ViewFields>
               <RowLimit Paged="TRUE">30</RowLimit>
               <JSLink>clienttemplates.js</JSLink>
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="DateTime" DisplayName="AgreedToPrivacy" Required="FALSE" Format="DateTime" ID="{ea717314-23b2-44f8-b05b-5e8b6aafb8e8}" SourceID="{{listid:UserSetting}}" StaticName="AgreedToPrivacy" Name="AgreedToPrivacy" ColName="datetime1" RowOrdinal="0" />
-            <Field Type="DateTime" DisplayName="AgreedToHealthSafety" Required="FALSE" Format="DateTime" ID="{dc2287d4-179d-4e9a-a014-ea62b9c47790}" SourceID="{{listid:UserSetting}}" StaticName="AgreedToHealthSafety" Name="AgreedToHealthSafety" ColName="datetime2" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="ManagerLogin" Required="FALSE" ID="{071778f2-e53c-4a5b-83b6-c9d506304000}" SourceID="{{listid:UserSetting}}" StaticName="ManagerLogin" Name="ManagerLogin" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="AgreedToPrivacy" Required="FALSE" Format="DateTime" ID="{55e37337-c8bc-42d3-b709-6e358424f032}" SourceID="{{listid:UserSetting}}" StaticName="AgreedToPrivacy" Name="AgreedToPrivacy" ColName="datetime1" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="AgreedToHealthSafety" Required="FALSE" Format="DateTime" ID="{0c49f469-b6b0-4c08-8d7b-580156f7dd15}" SourceID="{{listid:UserSetting}}" StaticName="AgreedToHealthSafety" Name="AgreedToHealthSafety" ColName="datetime2" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="ManagerLogin" Required="FALSE" ID="{75e1c2af-c1d3-4bb9-a1ff-9815aa55c47a}" SourceID="{{listid:UserSetting}}" StaticName="ManagerLogin" Name="ManagerLogin" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="AssistantLogin" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{b1519aff-0d51-4109-89fd-c5e55f3e47c6}" SourceID="{{listid:UserSetting}}" StaticName="AssistantLogin" Name="AssistantLogin" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Boolean" DisplayName="SendPushNotifications" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{c9464112-b0f5-4f62-9f16-5debf43f80f5}" SourceID="{{listid:UserSetting}}" StaticName="SendPushNotifications" Name="SendPushNotifications" ColName="bit1" RowOrdinal="0">
+              <Default>1</Default>
+            </Field>
           </pnp:Fields>
         </pnp:ListInstance>
-        <pnp:ListInstance Title="VisitorLog" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/VisitorLog" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/VisitorLog/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/VisitorLog/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/VisitorLog/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+        <pnp:ListInstance Title="VisitorAttestation" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/VisitorAttestation" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/VisitorAttestation/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/VisitorAttestation/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/VisitorAttestation/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
           <pnp:ContentTypeBindings>
             <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
             <pnp:ContentTypeBinding ContentTypeID="0x0120" />
           </pnp:ContentTypeBindings>
           <pnp:Views>
-            <View Name="{04CFD351-06BC-47A7-BCC0-57F011938273}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/VisitorLog/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <View Name="{EE0AC48E-B119-43B3-A475-88C2090C00B7}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/VisitorAttestation/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="VisitorName" />
+                <FieldRef Name="VisitorEmail" />
+                <FieldRef Name="VisitorPhone" />
+                <FieldRef Name="Attestation" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter><![CDATA[]]></CustomFormatter>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field DisplayName="VisitorName" Format="Dropdown" MaxLength="255" Name="VisitorName" Required="TRUE" Title="VisitorName" Type="Text" ID="{e3be6718-1ee9-40f0-85d2-81de4451246e}" StaticName="VisitorName" SourceID="{{listid:VisitorAttestation}}" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="VisitorEmail" Format="Dropdown" MaxLength="255" Name="VisitorEmail" Required="TRUE" Title="VisitorEmail" Type="Text" ID="{a8901705-d95f-47a1-a8e8-06d2cba634df}" StaticName="VisitorEmail" SourceID="{{listid:VisitorAttestation}}" ColName="nvarchar5" RowOrdinal="0" />
+            <Field DisplayName="VisitorPhone" Format="Dropdown" MaxLength="255" Name="VisitorPhone" Required="TRUE" Title="VisitorPhone" Type="Text" ID="{8abb64bf-66c8-4497-a3ae-4ff31ba503c9}" StaticName="VisitorPhone" SourceID="{{listid:VisitorAttestation}}" ColName="nvarchar6" RowOrdinal="0" />
+            <Field DisplayName="Attestation" Format="Dropdown" MaxLength="255" Name="Attestation" Required="TRUE" Title="Attestation" Type="Text" ID="{135d6f75-07c7-4d1d-a253-48ec73200720}" StaticName="Attestation" SourceID="{{listid:VisitorAttestation}}" ColName="nvarchar7" RowOrdinal="0" />
+          </pnp:Fields>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="VisitorLog" Description="" DocumentTemplate="" TemplateType="120" Url="Lists/VisitorLog" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-3a1d-41d3-a0ee-651d11570120" EnableFolderCreation="false" NoCrawl="true" DefaultDisplayFormUrl="{site}/Lists/VisitorLog/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/VisitorLog/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/VisitorLog/NewForm.aspx" ImageUrl="/_layouts/15/images/itdatash.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{EF506C83-AD81-4C0D-88E9-8844DA1E4F6D}" DefaultView="TRUE" Type="GRID" DisplayName="All Items" Url="{site}/Lists/VisitorLog/Allitemsg.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
               <Query>
                 <OrderBy>
                   <FieldRef Name="ID" />
@@ -206,10 +359,10 @@
             </View>
           </pnp:Views>
           <pnp:Fields>
-            <Field Type="Text" DisplayName="AccessRequestID" Required="FALSE" ID="{d0e9b3a1-6203-4845-8a11-01b3edd4340f}" SourceID="{{listid:VisitorLog}}" StaticName="AccessRequestID" Name="AccessRequestID" ColName="nvarchar4" RowOrdinal="0" Indexed="TRUE" Version="1" />
-            <Field Type="Text" DisplayName="VisitorName" Required="FALSE" ID="{2d9ca1b2-38d8-4775-9dca-67462de758e4}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorName" Name="VisitorName" ColName="nvarchar5" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="VisitorEmail" Required="FALSE" ID="{85000180-8ea3-438d-8545-b455de2b50d4}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorEmail" Name="VisitorEmail" ColName="nvarchar6" RowOrdinal="0" />
-            <Field Type="Text" DisplayName="VisitorPhone" Required="FALSE" ID="{9097c47c-b84c-4be0-a544-c5db883e3c21}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorPhone" Name="VisitorPhone" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="AccessRequestID" Required="FALSE" ID="{25ee0b29-2e20-4c09-955a-defa154e6d70}" SourceID="{{listid:VisitorLog}}" StaticName="AccessRequestID" Name="AccessRequestID" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="VisitorName" Required="FALSE" ID="{0f0f1c3e-d96e-4953-b80b-f8bdd992cd16}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorName" Name="VisitorName" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="VisitorEmail" Required="FALSE" ID="{a1b76442-95df-44c0-852a-9123f17496c8}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorEmail" Name="VisitorEmail" ColName="nvarchar6" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="VisitorPhone" Required="FALSE" ID="{36da3371-f562-4479-b0f1-b91b390d5508}" SourceID="{{listid:VisitorLog}}" StaticName="VisitorPhone" Name="VisitorPhone" ColName="nvarchar7" RowOrdinal="0" />
           </pnp:Fields>
         </pnp:ListInstance>
       </pnp:Lists>
